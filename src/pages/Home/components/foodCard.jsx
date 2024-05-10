@@ -7,7 +7,7 @@ import { MdDateRange } from "react-icons/md";
 import { TfiTime } from "react-icons/tfi";
 
 const FoodCard = ({food}) => {
-    console.log(food)
+    // console.log(food)
   return (
     <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
     <div className="card card-compact w-auto bg-base-100 shadow-sm border-2">
