@@ -6,7 +6,7 @@ const FoodsItems = () => {
     const [foodsItem,setFoodsItem]=useState([])
     const axiosSequer=useAxiosSequ();
     useEffect(()=>{
-        axiosSequer.get('/availablefood')
+        axiosSequer.get('/homefood')
         .then(res=>{
             // console.log(res.data)
             setFoodsItem(res.data)

@@ -8,6 +8,7 @@ import RequestFrom from './requestFrom/requestFrom';
 
 const FoodDetails = () => {
     const food=useLoaderData();
+    const logLine=`Food, in its myriad forms, transcends mere sustenance to become an artistry of flavors, textures, and aromas. From the delicate dance of spices in an Indian curry to the comforting embrace of a French baguette, each dish tells a story steeped in tradition and culture. Whether it's the umami richness of Japanese sushi or the fiery heat of a Mexican salsa, food is a universal language that speaks to our senses, invoking memories, emotions, and connections. It is the communal feast that brings families together, the culinary voyage that explores distant lands, and the nourishing embrace that sustains life itself. In every bite, we savor not just sustenance, but the essence of humanity's creativity, ingenuity, and resilience, woven into the fabric of our collective gastronomic heritage.`
     console.log(food);
   return (
     // <div>
@@ -25,6 +26,7 @@ const FoodDetails = () => {
         <div>
             <h1>Donar:</h1>
             <p className='font-bold text-5xl'>{food.Donator_Info.name}</p>
+            <h1 className='mt-2'>{food.Donator_Info.email?<div>email:{food.Donator_Info.email}</div>:''}</h1>
         </div>
      </div>
      
@@ -36,10 +38,10 @@ const FoodDetails = () => {
          />
          <div>
            <h1 class="md:text-5xl lg:text-start text-center font-bold">{food.Food_Name}</h1>
-           <p class="py-6 px-2">{food.Short_Description}</p>
            <hr className="border-1 border-sky-400 w-full mt-6 border-dashed" />
-           <h1 className="text-2xl text-sky-500 font-bold my-3">Know more:</h1>
-           <p class="lg:py-6 py-3 px-2">{food.Long_Description}</p>
+           <p className="sm:shadow-md mt-2 shadow-sm sm:p-4 p-1 bg-sky-50 rounded-3xl text-sky-600">{food.Short_Description?food.Short_Description:food.status}</p>
+           
+           <p className="sm:shadow-md shadow-sm sm:p-4 p-1 mt-2 bg-sky-50 rounded-3xl text-sky-600">{food.Long_Description?food.Long_Description:`${logLine}`}</p>
            <hr className="border-1 border-sky-400 w-full mt-6 border-dashed" />
          
            {/* reant and status */}

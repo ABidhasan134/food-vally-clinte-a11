@@ -8,6 +8,7 @@ import LogOut from "../log/logOut";
 import FoodDetails from "../pages/Home/components/foodDetails";
 import PriveteRoute from "./priveteRoute";
 import AddFood from "../addFood/addFood";
+import FoodAvailable from "../foodAvailable/foodAvailable";
 // import useAxiosSequ from "../hooks/useAxiosSequ";
 // const {axiosSequer}=useAxiosSequ();
 const Routers = createBrowserRouter([
@@ -40,6 +41,10 @@ const Routers = createBrowserRouter([
         {
           path: "/addfood",
           element: <PriveteRoute><AddFood></AddFood></PriveteRoute>
+        },
+        {
+          path: "/availablefood",
+          element: <FoodAvailable></FoodAvailable>,
         }
       ]
     },

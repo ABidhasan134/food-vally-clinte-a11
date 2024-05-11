@@ -1,10 +1,13 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../pages/context/AuthProvider";
+import useAxiosSequ from "../hooks/useAxiosSequ";
+
 
 const AddFood = () => {
   const { user } = useContext(AuthContext);
+  const axiosSequer=useAxiosSequ();
 
-  console.log(user);
+//   console.log(user);
   
   const handelAddFood=(e)=>{
     e.preventDefault();
@@ -25,6 +28,11 @@ const AddFood = () => {
         Pickup_Location,Expired_Date,Expired_Time,status,
         Additional_Info,Donator_Info }
         console.log(addInfo)
+    
+        axiosSequer.post('/addData',addInfo)
+        .then(res=>{
+            console.log(res.data)
+        })
   }
   return (
     <div>
