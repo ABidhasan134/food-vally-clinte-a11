@@ -57,7 +57,7 @@ const githublogInHandel = () => {
       toast("Login successful with Google");
       
       setTimeout(() => {
-        navigate("/");
+        navigate(logLocation?.state?logLocation.state:"/");
       }, 3000);
     })
     .catch((error) => {
@@ -77,7 +77,7 @@ const githublogInHandel = () => {
         toast("Login successful with Google");
         // console.log(user);
         setTimeout(() => {
-          navigate("/");
+          navigate(logLocation?.state?logLocation.state:"/");
         }, 3000);
       })
       .catch((error) => console.log("error", error.message));

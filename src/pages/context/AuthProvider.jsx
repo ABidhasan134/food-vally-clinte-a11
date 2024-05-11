@@ -27,7 +27,7 @@ const AuthProvider = ({children}) => {
             const unsubscribe= onAuthStateChanged(auth,currentUser=>{
               // get currentUser in user state
               setUser(currentUser);
-              console.log("Inside the useEffect", currentUser);
+              // console.log("Inside the useEffect", currentUser);
               // when user is loaded then loding is false
               setLoading(false);
             })
@@ -39,9 +39,9 @@ const AuthProvider = ({children}) => {
 
           const logOut=()=>{
             // use firebase build in functions
+            setLoading(false);
             return signOut(auth);
             // when user is createing loading should be true 
-            setLoading(true)
           }
 
           const authInfo={user,setUser,loading,setLoading,createUser,logInuser,logOut}

@@ -52,7 +52,7 @@ const Register = () => {
         .then(() => {
           toast("user created successfully");
           setUser({displayName : userName, photoURL : userphotoUrl}) 
-          // navigate("/")
+          navigate("/")
         })
         .catch((error) => {
           // An error occurred
@@ -143,7 +143,7 @@ const Register = () => {
                 </div>
                 {/* log in btn */}
                 <div className="form-control mt-6">
-                  <button className="btn bg-sky-400 hover:bg-sky-700 hover:text-white">Login</button>
+                  <button className="btn bg-sky-400 hover:bg-sky-700 hover:text-white">Sing Up</button>
                 </div>
               </form>
               <ToastContainer></ToastContainer>
