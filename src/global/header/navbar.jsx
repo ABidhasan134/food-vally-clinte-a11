@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../pages/context/AuthProvider";
 
 
 
 const Navbar = () => {
+
+  const{user,logOut}=useContext(AuthContext);
+
+  const handleCurrentUserLogOut = () => {
+    logOut();
+  };
 
     const links = (
     <>
@@ -70,22 +77,29 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      {/* {user ? 
-      ( */}
+      {user ? 
+      (
         <ul className="menu menu-horizontal px-1 navbar-end">
-          
+          <div
+            className="avatar tooltip tooltip-bottom"
+            data-tip={user?.displayName || "username"}
+          >
+            <div className=" w-12 rounded-full">
+              <img src={user.photoURL} alt="User Profile" />
+            </div>
+          </div>
           <li>
-            <NavLink to="/logout" >
+            <NavLink to="/logout" onClick={handleCurrentUserLogOut}>
               Log out
             </NavLink>
           </li>
-
-        </ul>
+          {/* <p>{user.displayName}</p> */}
+        </ul>):
 
         <ul className="menu menu-horizontal px-1 navbar-end">
           {loginRegister}
         </ul>
-
+      }
     </div>
   );
 };
