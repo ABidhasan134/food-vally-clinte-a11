@@ -1,27 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Bannar = () => {
   return (
-    <div className="carousel w-full lg:mb-5 relative sm:-top-4 -top-3 md:top-1 lg:top-0 ">
+    <div className="carousel w-full lg:mb-5 relative sm:-top-4 -top-3 md:top-1 lg:top-2 ">
       <div id="slide1" className="carousel-item relative w-full">
         {/* 1st slider */}
         <div
           className="hero min-h-[500px]"
           style={{
             backgroundImage:
-              "url(https://www.hotelmousai.com/blog/wp-content/uploads/2021/12/Top-10-Traditional-Foods-in-Italy.jpg)",
+              "url(https://c8.alamy.com/comp/2BTXCHC/different-food-and-text-donate-on-wooden-background-top-view-donation-concept-2BTXCHC.jpg)",
           }}
         >
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="max-w-md">
-              <h1 className="mb-5 text-5xl font-bold">Italian Cuisine</h1>
+              <h1 className="mb-5 text-5xl font-bold">Sharing Food and Reduction Surplus</h1>
               <p className="mb-5">
-                Pasta dishes: Spaghetti Carbonara, Fettuccine Alfredo, Lasagna
-                Pizza varieties: Margherita, Pepperoni, Neapolitan isotto
-                dishes: Risotto alla Milanese, Seafood Risotto
+              Nourish Together is a digital platform dedicated to fostering community-driven food sharing and reducing surplus across neighborhoods. By connecting individuals, businesses, and organizations, we aim to redistribute excess food to those in need while promoting sustainability and community resilience. Join us in creating a world where no one goes hungry, and surplus food finds its way to those who need it most.
               </p>
-              <button className="btn btn-primary">Get Started</button>
+              <button className="btn btn-primary"><Link to="/availablefood">Show All</Link></button>
             </div>
           </div>
         </div>
@@ -41,19 +40,17 @@ const Bannar = () => {
           className="hero min-h-[500px]"
           style={{
             backgroundImage:
-              "url(https://www.tastingtable.com/img/gallery/20-delicious-indian-dishes-you-have-to-try-at-least-once/intro-1645057933.jpg)",
+              "url(https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvczkyLXBtLTAxNjkyXzEucG5n.png)",
           }}
         >
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="max-w-md">
-              <h1 className="mb-5 text-5xl font-bold">Indian Cuisine</h1>
+              <h1 className="mb-5 text-5xl font-bold">Sharing Food and Reduction Surplus</h1>
               <p className="mb-5">
-                Curries: Chicken Tikka Masala, Palak Paneer, Rogan Josh Biryani
-                varieties: Chicken Biryani, Vegetable Biryani, Hyderabadi
-                Biryani Street foods: Samosas, Chaat, Vada Pav
+                CNourish Together is a digital platform dedicated to fostering community-driven food sharing and reducing surplus across neighborhoods. By connecting individuals, businesses, and organizations, we aim to redistribute excess food to those in need while promoting sustainability and community resilience. Join us in creating a world where no one goes hungry, and surplus food finds its way to those who need it most.
               </p>
-              <button className="btn btn-primary">Get Started</button>
+              <button className="btn btn-primary"><Link to="/availablefood">Show All</Link></button>
             </div>
             {/* 2nd end */}
           </div>
@@ -73,19 +70,15 @@ const Bannar = () => {
           className="hero min-h-[500px]"
           style={{
             backgroundImage:
-              "url(https://static01.nyt.com/images/2019/01/02/dining/02korai6/merlin_147967416_2c367d7a-0a38-494a-8825-19f0ac6eadcf-superJumbo.jpg)",
+              "url(https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2017/04/15/Pictures/_87112c3e-21bb-11e7-89d6-c3c500e93e5a.jpg)",
           }}
         >
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="max-w-md">
-              <h1 className="mb-5 text-5xl font-bold">Bangladesh cuisine</h1>
+              <h1 className="mb-5 text-5xl font-bold">Sharing Food and Reduction Surplus</h1>
               <p className="mb-5">
-                Biryani: Bangladeshi Biryani typically includes flavorful rice
-                cooked with aromatic spices, meat (often chicken, beef, or
-                mutton), and potatoes. Khichuri: A comfort food made with rice,
-                lentils, and spices, often served during festivals or special
-                occasions.
+              Nourish Together is a digital platform dedicated to fostering community-driven food sharing and reducing surplus across neighborhoods. By connecting individuals, businesses, and organizations, we aim to redistribute excess food to those in need while promoting sustainability and community resilience. Join us in creating a world where no one goes hungry, and surplus food finds its way to those who need it most.
               </p>
               <button className="btn btn-primary">Get Started</button>
             </div>
@@ -106,16 +99,15 @@ const Bannar = () => {
           className="hero min-h-[500px]"
           style={{
             backgroundImage:
-              "url(https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000370/img/en/a0000370_parts_580db8503c1ee.jpg?20201002142956&q=80&rw=686&rh=490)",
+              "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIEztR36AjPCYxDCkcfFPQDNdHCXwMs1QRn713x8cSSA&s)",
           }}
         >
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="max-w-md">
-              <h1 className="mb-5 text-5xl font-bold">Japanese Cuisine</h1>
+              <h1 className="mb-5 text-5xl font-bold">Sharing Food and Reduction Surplus</h1>
               <p className="mb-5">
-                Sushi types: Nigiri, Maki, Sashimi Ramen varieties: Shoyu, Miso,
-                Tonkotsu Tempura dishes: Shrimp Tempura, Vegetable Tempura
+              Nourish Together is a digital platform dedicated to fostering community-driven food sharing and reducing surplus across neighborhoods. By connecting individuals, businesses, and organizations, we aim to redistribute excess food to those in need while promoting sustainability and community resilience. Join us in creating a world where no one goes hungry, and surplus food finds its way to those who need it most.
               </p>
               <button className="btn btn-primary">Get Started</button>
             </div>
@@ -131,10 +123,7 @@ const Bannar = () => {
         </div>
       </div>
     </div>
-    // <div>
-    //     {/* 1st slider */}
-
-    // </div>
+    
   );
 };
 
