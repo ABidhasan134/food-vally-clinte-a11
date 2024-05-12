@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "../pages/context/AuthProvider";
 import useAxiosSequ from "../hooks/useAxiosSequ";
 import { ToastContainer, toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 
 const AddFood = () => {
@@ -40,6 +41,9 @@ const AddFood = () => {
   }
   return (
     <div>
+      <Helmet>
+                <title>Food Vally | Add food</title>
+            </Helmet>
       <form className="mt-2 gap-2" onSubmit={handelAddFood}>
         {/* Food name food Img */}
         <div className="flex gap-2 justify-center">
