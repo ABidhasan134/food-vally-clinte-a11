@@ -10,6 +10,7 @@ import PriveteRoute from "./priveteRoute";
 import AddFood from "../addFood/addFood";
 import FoodAvailable from "../foodAvailable/foodAvailable";
 import RequestFood from "../myRequest/requestFood";
+import ManageFood from "../managFood/manageFood";
 // import useAxiosSequ from "../hooks/useAxiosSequ";
 // const {axiosSequer}=useAxiosSequ();
 const Routers = createBrowserRouter([
@@ -50,6 +51,10 @@ const Routers = createBrowserRouter([
         {
           path: "/request",
           element: <PriveteRoute><RequestFood></RequestFood></PriveteRoute>
+        },
+        {
+          path: "/managefood",
+          element: <PriveteRoute><ManageFood></ManageFood></PriveteRoute>
         }
       ]
     },

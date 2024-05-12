@@ -15,7 +15,7 @@ const FoodAvailable = () => {
             .then(res => {
                 setFoodhave(res.data);
                 setLoading(false);
-                 
+                
             })
             .catch(error => {
                 console.error('Error fetching available food:', error);
