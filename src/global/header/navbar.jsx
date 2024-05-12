@@ -27,7 +27,7 @@ const Navbar = () => {
         <a><NavLink >Manage food</NavLink></a>
       </li>
       <li >
-        <a><NavLink >Food Request</NavLink></a>
+        <a><NavLink to="/request">Food Request</NavLink></a>
       </li>
     </>
   );

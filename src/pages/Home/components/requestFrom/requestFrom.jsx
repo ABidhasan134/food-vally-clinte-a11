@@ -1,8 +1,10 @@
 import React, { useContext } from 'react'
 import { AuthContext } from '../../../context/AuthProvider';
-
+import useAxiosSequ from '../../../../hooks/useAxiosSequ';
+import { ToastContainer, toast } from "react-toastify";
 const RequestFrom = ({food}) => {
     const { user,logOut,setUser,setReload} = useContext(AuthContext);
+    const axiosSequer = useAxiosSequ();
    console.log(food);
 // get Currentdate 
    const currentDate = new Date();
@@ -18,10 +20,21 @@ const handelSubmitRequest=(e)=>{
     const Expired_Date=e.target.expireddate.value;
     const Food_AddtonalInfo=e.target.addtonalInfo.value;
     const Food_Status="request";
-    console.log(Expired_Date,Food_AddtonalInfo,Food_Status);
+    const infoupdate={Expired_Date,Food_AddtonalInfo,Food_Status}
+    // console.log(infoupdate);
+    axiosSequer.patch(`/requsest/${food._id}`,infoupdate)
+  .then(res=>{
+    console.log(res.data)
+    if(res.data.modifiedCount>0){
+      toast("your request has been submitted")
+    }
+    })
+
 }
+
   return (
     <div className='flex justify-center'>
+      <ToastContainer></ToastContainer>
     <button className="btn my-2 w-1/2 bg-sky-300 hover:bg-sky-500" onClick={()=>document.getElementById('my_modal_3').showModal()}> Request</button>
 <dialog id="my_modal_3" className="modal">
  <div className="modal-box">
@@ -158,7 +171,7 @@ const handelSubmitRequest=(e)=>{
         {/* diable filed end */}
         <label name="addtonalInfo">Additonal Information</label>
         <textarea className='border-2' name="addtonalInfo" placeholder='Add somthing'></textarea>
-        <button className='btn bg-sky-300 hover:bg-sky-500'>Confirm Requst</button>
+        <button className='btn bg-sky-300 hover:bg-sky-500' >Confirm Requst</button>
     </form>
  </div>
 </dialog>
