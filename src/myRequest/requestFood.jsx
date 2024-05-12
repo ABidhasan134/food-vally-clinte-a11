@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import useAxiosSequ from '../hooks/useAxiosSequ'
+import RowRequst from './rowRequst';
 
 const RequestFood = () => {
     const [reqFood,setReqFood]=useState();
@@ -10,7 +11,7 @@ const RequestFood = () => {
             .then(res => {
                 setReqFood(res.data);
                 setLoading(false);
-                console.log(res.data)
+                // console.log(res.data)
                  
             })
             .catch(error => {
@@ -26,10 +27,30 @@ const RequestFood = () => {
         <span className="loading loading-bars loading-lg"></span></div>;
     }
   return (
-    <div>
-      hi
+    <div className="overflow-x-auto">
+      <table className="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>PicUp Location</th>
+            <th>Exp: Date</th>
+            <th>requ data</th>
+            <th>Donnated Amounte</th>
+          </tr>
+        </thead>
+        <tbody>
+        {
+reqFood.map((food)=>{
+  return <RowRequst food={food} key={food._id}/>
+  
+})
+}
+        </tbody>
+        
+      </table>
     </div>
   )
 }
+
 
 export default RequestFood

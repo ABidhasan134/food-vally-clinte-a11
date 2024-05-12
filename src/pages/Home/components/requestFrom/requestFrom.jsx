@@ -20,7 +20,8 @@ const handelSubmitRequest=(e)=>{
     const Expired_Date=e.target.expireddate.value;
     const Food_AddtonalInfo=e.target.addtonalInfo.value;
     const Food_Status="request";
-    const infoupdate={Expired_Date,Food_AddtonalInfo,Food_Status}
+    const Food_requestDate=e.target.requestDate.value;
+    const infoupdate={Expired_Date,Food_AddtonalInfo,Food_Status,Food_requestDate}
     // console.log(infoupdate);
     axiosSequer.patch(`/requsest/${food._id}`,infoupdate)
   .then(res=>{
@@ -132,20 +133,6 @@ const handelSubmitRequest=(e)=>{
             />
           </div>
           <div className="w-[50%]">
-            <span>Donar Email</span>
-            <input
-              type="text"
-              defaultValue={food?.email}
-              name="foodemail"
-              placeholder="foodemail"
-              className=" mt-2 input input-bordered input-accent w-full"
-              disabled
-            />
-          </div>
-        </div>
-        {/* pick up location and expir date */}
-        <div className="flex gap-2 justify-center">
-          <div className="w-[50%]">
             <span>Pick up Location</span>
             <input
               type="text"
@@ -156,6 +143,10 @@ const handelSubmitRequest=(e)=>{
               disabled
             />
           </div>
+        </div>
+        {/* pick up location and expir date */}
+        <div className="flex gap-2 justify-center">
+          
           <div className="w-[50%]">
             <span>Expired Date</span>
             <input
@@ -167,10 +158,13 @@ const handelSubmitRequest=(e)=>{
               required
             />
           </div>
+          <div className="w-[50%]">
+          <label name="addtonalInfo">Additonal Information</label>
+        <textarea className='border-2' name="addtonalInfo" placeholder='Add somthing'></textarea>
+          </div>
         </div>
         {/* diable filed end */}
-        <label name="addtonalInfo">Additonal Information</label>
-        <textarea className='border-2' name="addtonalInfo" placeholder='Add somthing'></textarea>
+        
         <button className='btn bg-sky-300 hover:bg-sky-500' >Confirm Requst</button>
     </form>
  </div>
