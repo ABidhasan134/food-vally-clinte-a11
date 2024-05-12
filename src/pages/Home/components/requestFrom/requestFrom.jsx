@@ -22,7 +22,7 @@ const handelSubmitRequest=(e)=>{
 }
   return (
     <div className='flex justify-center'>
-    <button className="btn" onClick={()=>document.getElementById('my_modal_3').showModal()}> Request</button>
+    <button className="btn my-2 w-1/2 bg-sky-300 hover:bg-sky-500" onClick={()=>document.getElementById('my_modal_3').showModal()}> Request</button>
 <dialog id="my_modal_3" className="modal">
  <div className="modal-box">
    <form method="dialog">

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const FoodAvailableCards = ({foodhave}) => {
   const shortLine=`Food, a symphony of flavors and textures, transcends cultural boundaries to unite humanity in a shared sensory experience. From the exotic spices of the East to the comforting simplicity of home-cooked meals, each dish tells a story of heritage, passion, and connection. In every bite, we taste not just nourishment but the richness of our shared human experience.`
-    console.log(foodhave)
+    // console.log(foodhave)
   return (
     <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" className='my-2'>
     <div className="card card-compact w-auto bg-base-100 shadow-sm border-2">

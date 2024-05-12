@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../pages/context/AuthProvider";
 import useAxiosSequ from "../hooks/useAxiosSequ";
+import { ToastContainer, toast } from "react-toastify";
 
 
 const AddFood = () => {
@@ -32,6 +33,9 @@ const AddFood = () => {
         axiosSequer.post('/addData',addInfo)
         .then(res=>{
             console.log(res.data)
+            if(res.data.insertedId){
+              toast("Food Created successfully. Thanks you for your contribution")
+            }
         })
   }
   return (
@@ -176,6 +180,7 @@ const AddFood = () => {
           Add Food
         </button>
       </form>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
