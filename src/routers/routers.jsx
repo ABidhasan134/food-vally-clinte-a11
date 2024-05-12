@@ -11,6 +11,7 @@ import AddFood from "../addFood/addFood";
 import FoodAvailable from "../foodAvailable/foodAvailable";
 import RequestFood from "../myRequest/requestFood";
 import ManageFood from "../managFood/manageFood";
+import UpdateAll from "../managFood/updateAll";
 // import useAxiosSequ from "../hooks/useAxiosSequ";
 // const {axiosSequer}=useAxiosSequ();
 const Routers = createBrowserRouter([
@@ -55,7 +56,13 @@ const Routers = createBrowserRouter([
         {
           path: "/managefood",
           element: <PriveteRoute><ManageFood></ManageFood></PriveteRoute>
+        },
+        {
+          path: "/updateall/:id",
+          element: <UpdateAll></UpdateAll>,
+          loader: ({params}) => fetch(`http://localhost:5000/foodsingledetails/${params.id}`)
         }
+        
       ]
     },
   ]);

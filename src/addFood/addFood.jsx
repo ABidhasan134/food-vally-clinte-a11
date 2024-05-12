@@ -22,12 +22,12 @@ const AddFood = () => {
     const name=e.target.donarname.value;
     const email=e.target.donaremail.value;
     const image=e.target.donarURL.value;
-    const status=e.target.donetstatus.value;
+    const Food_Status=e.target.donetstatus.value;
     const Additional_Info=e.target.addtonalInfo.value;
    
     const Donator_Info={name,email,image}
     const addInfo={Food_Name,Food_Image,Food_Quantity,
-        Pickup_Location,Expired_Date,Expired_Time,status,
+        Pickup_Location,Expired_Date,Expired_Time,Food_Status,
         Additional_Info,Donator_Info }
         console.log(addInfo)
     

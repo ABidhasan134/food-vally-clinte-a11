@@ -1,12 +1,16 @@
 import React from 'react'
 import { MdDeleteOutline } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
-const UpdateManage = ({food}) => {
-    console.log(food)
+
+const UpdateManage = ({food,handeldelete}) => {
+   
+
+    // console.log(food)
   return (
    
         <tr>
-          <th><MdDeleteOutline className='text-5xl hover:border-2 hover:bg-red-50 p-2 rounded-full'></MdDeleteOutline> </th>
+          <th onClick={()=>handeldelete(food._id)}><MdDeleteOutline className='text-5xl hover:border-2 hover:bg-red-50 p-2 rounded-full'></MdDeleteOutline> </th>
           <td>
             <div className="flex items-center gap-3">
               <div className="avatar">
@@ -29,7 +33,7 @@ const UpdateManage = ({food}) => {
           <th>
             <button className="btn btn-ghost btn-xs">{food?.Food_Status}</button>
           </th>
-          <th><button className='hover:text-green-400'>Update</button></th>
+          <th><Link to={`/updateall/${food._id}`}><button className='hover:text-green-400'>Update</button></Link></th>
         </tr>
 
   )
