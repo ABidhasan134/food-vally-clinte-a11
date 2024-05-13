@@ -1,12 +1,14 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
 import React, { createContext, useEffect, useState } from 'react'
 import { auth } from '../../firebase/firebase'
+import useAxiosSequ from '../../hooks/useAxiosSequ'
 
 export const AuthContext=createContext()
 
 const AuthProvider = ({children}) => {
     const [user,setUser]=useState(null)
     const [loading, setLoading]=useState(true)
+    const axiosSequer=useAxiosSequ();
 
     const createUser=(email,password)=>{
         // use firebase build in functions
@@ -26,10 +28,25 @@ const AuthProvider = ({children}) => {
             // obgarber for user and whice user is use this 
             const unsubscribe= onAuthStateChanged(auth,currentUser=>{
               // get currentUser in user state
+              const useremail=currentUser?.email || user?.email
               setUser(currentUser);
               // console.log("Inside the useEffect", currentUser);
               // when user is loaded then loding is false
               setLoading(false);
+              const loggerUser={email: useremail}
+              if(currentUser){
+               
+                axiosSequer.post('/jwt',loggerUser)
+                .then(res=>{
+                  console.log("token response",res.data);
+                })
+              }
+              else{
+                axiosSequer.post('/logoutcooke',loggerUser)
+                .then(res=>{
+                  console.log("token response")
+                })
+              }
             })
             // returning the user as unsubscribe
             return ()=>{

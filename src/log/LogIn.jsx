@@ -29,7 +29,7 @@ const LogIn = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        console.log(user);
+        // console.log(user);
         toast("Login successful")
         // ...
         // navigate("/");
