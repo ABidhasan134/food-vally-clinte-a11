@@ -3,6 +3,7 @@ import { AuthContext } from "../pages/context/AuthProvider";
 import useAxiosSequ from "../hooks/useAxiosSequ";
 import UpdateManage from "./updateManage";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const ManageFood = () => {
   const [myFood, setMyFood] = useState([]);
@@ -66,6 +67,9 @@ const ManageFood = () => {
   // console.log(myFood)
   return (
     <div className="overflow-x-auto">
+      <Helmet>
+        <title>Food vally | Manage Food</title>
+      </Helmet>
       <table className="table">
         {/* head */}
         <thead>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import useAxiosSequ from '../hooks/useAxiosSequ'
 import RowRequst from './rowRequst';
+import { Helmet } from 'react-helmet';
 
 const RequestFood = () => {
     const [reqFood,setReqFood]=useState();
@@ -28,6 +29,9 @@ const RequestFood = () => {
     }
   return (
     <div className="overflow-x-auto">
+      <Helmet>
+        <title>food vally | My Request </title>
+      </Helmet>
       <table className="table">
         <thead>
           <tr>

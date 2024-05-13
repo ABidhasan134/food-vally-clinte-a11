@@ -65,10 +65,10 @@ const FoodAvailable = () => {
                 <title>Food Vally | Available food</title>
             </Helmet>
             
-            <div>
-                <form onSubmit={handalSearch}>
+            <div className='flex justify-evenly'>
+                <form onSubmit={handalSearch} className='flex gap-1'>
                 <input type="text" name='search' placeholder="Enter Food name" className="input input-bordered w-full max-w-xs" />
-                <button className='btn'>Search</button>
+                <button className='btn bg-sky-300 hover:bg-sky-500 font-semibold'>Search</button>
                 </form>
                 <div>
                 <details className="dropdown">

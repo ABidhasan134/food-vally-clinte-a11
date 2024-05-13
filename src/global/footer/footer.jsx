@@ -1,8 +1,11 @@
 import React from "react";
+import logo from "../../../public/img/svg.png"
 
 const Footer = () => {
   return (
-  <div className="bg-gradient-to-r from-green-300 to-green-50 text-center">
+    <div className="mt-6">
+   <div>
+   <div className="hero bg-gray-600" style={{backgroundImage: `url(${logo})`}}>
     <footer className="footer p-10  text-base-content">
     <aside>
       <h1 className="font-bold text-3xl">Food Vally</h1>
@@ -63,8 +66,10 @@ const Footer = () => {
     </nav>
     
   </footer>
-  <p>Copyright © 2024 - All right reserved by HomeLand Builders Ltd</p>
+  <div className="relative text-center  lg:mt-72 mt-[750px]"><p>Copyright © 2024 - All right reserved by HomeLand Builders Ltd</p></div>
   </div>
+  </div>
+   </div>
   );
 };
 

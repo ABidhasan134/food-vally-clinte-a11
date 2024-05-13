@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet';
 import { MdDeleteOutline } from "react-icons/md";
 import { Link } from 'react-router-dom';
 
@@ -10,6 +11,9 @@ const UpdateManage = ({food,handeldelete}) => {
   return (
    
         <tr>
+          <Helmet>
+            <title>food vally | manage Food</title>
+          </Helmet>
           <th onClick={()=>handeldelete(food._id)}><MdDeleteOutline className='text-5xl hover:border-2 hover:bg-red-50 p-2 rounded-full'></MdDeleteOutline> </th>
           <td>
             <div className="flex items-center gap-3">

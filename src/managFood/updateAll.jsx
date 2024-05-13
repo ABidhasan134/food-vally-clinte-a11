@@ -39,7 +39,7 @@ const UpdateAll = () => {
   return (
     <div>
     <Helmet>
-              <title>Food Vally | Food Update</title>
+              <title>Food Vally | {food.Food_Image}</title>
           </Helmet>
     <form className="mt-2 gap-2" onSubmit={handelAllUpdates}>
       {/* Food name food Img */}
