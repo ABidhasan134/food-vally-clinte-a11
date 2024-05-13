@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../pages/context/AuthProvider";
 import { motion } from "framer-motion"
-
+import "./style.css"
 
 const Navbar = () => {
 

@@ -9,6 +9,7 @@ const FoodAvailable = () => {
   const [foodhave, setFoodhave] = useState([]);
   const [loading, setLoading] = useState(true);
   const axiosSequer = useAxiosSequ();
+  const [toggol,setToggol]=useState(true);
 
   // data for how have available statuses
   useEffect(() => {
@@ -60,6 +61,12 @@ const FoodAvailable = () => {
     }
   };
 
+  const handaleLayOut=()=>{
+    console.log("click")
+    setToggol(!toggol)
+    console.log(toggol)
+  }
+
   return (
     <div className="my-2">
       <Helmet>
@@ -67,6 +74,7 @@ const FoodAvailable = () => {
       </Helmet>
 
       <div className="flex justify-evenly">
+          <button className="btn bg-green-500 hover:bg-green-600" onClick={handaleLayOut}>layout</button>
         <form onSubmit={handalSearch} className="flex gap-1">
           <input
             type="text"
@@ -94,11 +102,12 @@ const FoodAvailable = () => {
           </details>
         </div>
       </div>
-      <div className="mx-2 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 relative sm:-top-12 md:top-0 lg:top-0">
+      <div className={`mx-2 grid ${toggol?"lg:grid-cols-3":"lg:md:grid-cols-2"} md:grid-cols-2 sm:grid-cols-1 gap-6 relative sm:-top-12 md:top-0 lg:top-0`}>
         {foodhave.map((food, index) => (
           <FoodAvailableCards key={index} foodhave={food} />
         ))}
       </div>
+      
     </div>
   );
 };
