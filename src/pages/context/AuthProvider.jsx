@@ -44,7 +44,7 @@ const AuthProvider = ({children}) => {
               else{
                 axiosSequer.post('/logoutcooke',loggerUser)
                 .then(res=>{
-                  console.log("token response")
+                  // console.log("token response")
                 })
               }
             })

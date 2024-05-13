@@ -37,7 +37,7 @@ const ManageFood = () => {
   }
 //   delet functionality
   const handeldelete = (_id) => {
-    console.log(_id);
+    // console.log(_id);
     Swal.fire({
       title: "Are you sure?",
       text: "You to delete  this!",
@@ -49,7 +49,7 @@ const ManageFood = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axiosSequer.delete(`/managefood/${_id}`).then((res) => {
-          console.log(res.data);
+          // console.log(res.data);
           if (res.data.deletedCount > 0) {
             Swal.fire({
               title: "Deleted!",

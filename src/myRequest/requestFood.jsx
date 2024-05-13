@@ -4,7 +4,7 @@ import RowRequst from './rowRequst';
 import { Helmet } from 'react-helmet';
 
 const RequestFood = () => {
-    const [reqFood,setReqFood]=useState();
+    const [reqFood,setReqFood]=useState([]);
     const [loading, setLoading] = useState(true);
     const axiosSequer=useAxiosSequ();
     useEffect(() => {
@@ -44,7 +44,7 @@ const RequestFood = () => {
         </thead>
         <tbody>
         {
-reqFood.map((food)=>{
+     reqFood.map((food)=>{
   return <RowRequst food={food} key={food._id}/>
   
 })

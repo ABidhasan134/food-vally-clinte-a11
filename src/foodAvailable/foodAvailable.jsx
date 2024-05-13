@@ -52,7 +52,7 @@ const FoodAvailable = () => {
       // Reset foodhave to its original value
       setFoodhave([...foodhave]);
     } else if (type === "FoodExpire") {
-      console.log("Food Expire");
+      // console.log("Food Expire");
       const sortedFood = [...foodhave].sort((a, b) => {
         // Sorting by Expired_Date in ascending order
         return new Date(a.Expired_Date) - new Date(b.Expired_Date);
@@ -62,9 +62,9 @@ const FoodAvailable = () => {
   };
 
   const handaleLayOut=()=>{
-    console.log("click")
+    // console.log("click")
     setToggol(!toggol)
-    console.log(toggol)
+    // console.log(toggol)
   }
 
   return (

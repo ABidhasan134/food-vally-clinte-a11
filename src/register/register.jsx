@@ -25,7 +25,7 @@ const Register = () => {
     const useremail = e.target.email.value;
     const userpassword = e.target.password.value;
     const userphotoUrl = e.target.url.value;
-    console.log(userName, userpassword, userphotoUrl, useremail);
+    // console.log(userName, userpassword, userphotoUrl, useremail);
     if(userpassword.length<6){
       toast("your password must be at least 6 characters")
       return;
@@ -56,7 +56,7 @@ const Register = () => {
         })
         .catch((error) => {
           // An error occurred
-          console.log(error)
+          // console.log(error)
           // ...
         });
         // logOut();
@@ -68,7 +68,7 @@ const Register = () => {
       .catch((error) => {
         const errorMessage = error.message;
         
-        console.log(errorMessage)
+        // console.log(errorMessage)
         toast(`Your already Have account please log in`);
       });
       

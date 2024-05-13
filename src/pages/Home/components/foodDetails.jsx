@@ -9,7 +9,7 @@ import RequestFrom from './requestFrom/requestFrom';
 const FoodDetails = () => {
     const food=useLoaderData();
     const logLine=`Food, in its myriad forms, transcends mere sustenance to become an artistry of flavors, textures, and aromas. From the delicate dance of spices in an Indian curry to the comforting embrace of a French baguette, each dish tells a story steeped in tradition and culture. Whether it's the umami richness of Japanese sushi or the fiery heat of a Mexican salsa, food is a universal language that speaks to our senses, invoking memories, emotions, and connections. It is the communal feast that brings families together, the culinary voyage that explores distant lands, and the nourishing embrace that sustains life itself. In every bite, we savor not just sustenance, but the essence of humanity's creativity, ingenuity, and resilience, woven into the fabric of our collective gastronomic heritage.`
-    console.log(food);
+    // console.log(food);
   return (
     // <div>
     //   {food.Donator_Info.name}

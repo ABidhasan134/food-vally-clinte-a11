@@ -29,7 +29,7 @@ const UpdateAll = () => {
     }
     axiosSequer.patch(`/updateall/${food._id}`,updateInfo)
     .then(res=>{
-        console.log(res.data);
+        // console.log(res.data);
         if(res.data.modifiedCount>0){
             toast("Update successful")
           }

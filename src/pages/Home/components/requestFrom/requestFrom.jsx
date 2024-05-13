@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 const RequestFrom = ({food}) => {
     const { user,logOut,setUser,setReload} = useContext(AuthContext);
     const axiosSequer = useAxiosSequ();
-   console.log(food);
+  //  console.log(food);
 // get Currentdate 
    const currentDate = new Date();
 
@@ -25,7 +25,7 @@ const handelSubmitRequest=(e)=>{
     // console.log(infoupdate);
     axiosSequer.patch(`/requsest/${food._id}`,infoupdate)
   .then(res=>{
-    console.log(res.data)
+    // console.log(res.data)
     if(res.data.modifiedCount>0){
       toast("your request has been submitted")
     }

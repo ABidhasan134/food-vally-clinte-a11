@@ -1,13 +1,11 @@
 import axios from "axios";
-const axiosSequer= axios.create({
-    baseURL: "http://localhost:5000",
-    withCredentials: true,
-})
-
-
+const axiosSequer = axios.create({
+  baseURL: "https://hunger-food-chi.vercel.app",
+  withCredentials: true,
+});
 
 const useAxiosSequ = () => {
-  return axiosSequer
-}
+  return axiosSequer;
+};
 
-export default useAxiosSequ
+export default useAxiosSequ;

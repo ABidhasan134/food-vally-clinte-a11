@@ -11,7 +11,7 @@ const AddFood = () => {
   const axiosSequer=useAxiosSequ();
   const navigate=useNavigate()
 
-  console.log(user.email,user.displayName);
+  // console.log(user.email,user.displayName);
   
   const handelAddFood=(e)=>{
     e.preventDefault();
@@ -31,12 +31,12 @@ const AddFood = () => {
     const addInfo={Food_Name,Food_Image,Food_Quantity,
         Pickup_Location,Expired_Date,Expired_Time,Food_Status,
         Additional_Info,Donator_Info }
-        console.log(addInfo)
+        // console.log(addInfo)
     
        if(user.email){
         axiosSequer.post('/addData',addInfo)
         .then(res=>{
-            console.log(res.data)
+            // console.log(res.data)
             if(res.data.insertedId){
               toast("Food Created successfully. Thanks you for your contribution")
             }
