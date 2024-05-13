@@ -3,13 +3,15 @@ import { AuthContext } from "../pages/context/AuthProvider";
 import useAxiosSequ from "../hooks/useAxiosSequ";
 import { ToastContainer, toast } from "react-toastify";
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
 
 
 const AddFood = () => {
   const { user } = useContext(AuthContext);
   const axiosSequer=useAxiosSequ();
+  const navigate=useNavigate()
 
-//   console.log(user);
+  console.log(user.email,user.displayName);
   
   const handelAddFood=(e)=>{
     e.preventDefault();
@@ -31,6 +33,7 @@ const AddFood = () => {
         Additional_Info,Donator_Info }
         console.log(addInfo)
     
+       if(user.email){
         axiosSequer.post('/addData',addInfo)
         .then(res=>{
             console.log(res.data)
@@ -38,6 +41,13 @@ const AddFood = () => {
               toast("Food Created successfully. Thanks you for your contribution")
             }
         })
+       }
+       else{
+        toast("Please login with email address To add data")  
+          setTimeout(()=>{
+            navigate("/login")
+          },2000)
+       }
   }
   return (
     <div>

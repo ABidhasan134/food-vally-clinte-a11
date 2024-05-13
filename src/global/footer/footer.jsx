@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="mt-6">
    <div>
    <div className="hero bg-gray-600" style={{backgroundImage: `url(${logo})`}}>
-    <footer className="footer p-10  text-base-content">
+    <footer className="footer p-10  text-white">
     <aside>
       <h1 className="font-bold text-3xl">Food Vally</h1>
       <p>Our misson to remove hungerness form <br /> our country.Sicnce we helping from 2009</p>

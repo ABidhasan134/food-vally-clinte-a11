@@ -21,7 +21,7 @@ const MisonVison = () => {
 </div>
 {/* card 2 */}
 <div className="card card-compact w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://i.ibb.co/vdgwPjR/aff-img.jpg" alt="Shoes" /></figure>
+  <figure><img src="https://i.ytimg.com/vi/ig5tL3Z5TNc/maxresdefault.jpg" alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">PALESTINE EMERGENCY</h2>
     <p>We is providing urgent support to those affected by the crisis in Palestine</p>

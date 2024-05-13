@@ -12,12 +12,14 @@ import FoodAvailable from "../foodAvailable/foodAvailable";
 import RequestFood from "../myRequest/requestFood";
 import ManageFood from "../managFood/manageFood";
 import UpdateAll from "../managFood/updateAll";
+import Error from "../error/error"
 // import useAxiosSequ from "../hooks/useAxiosSequ";
 // const {axiosSequer}=useAxiosSequ();
 const Routers = createBrowserRouter([
     {
       path: "/",
       element: <App></App>,
+      errorElement: <Error></Error>,
       children: [
         {
             path: "/",

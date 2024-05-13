@@ -14,12 +14,17 @@ const FoodsItems = () => {
     },[])
     // console.log(foodsItem);
   return (
-    <div className="mx-2 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 relative sm:-top-12 md:top-0 lg:top-0">
+    <div>
+        <div>
+            <h1>Donated Items</h1>
+        </div>
+        <div className="mx-2 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 relative sm:-top-12 md:top-0 lg:top-0">
     {
         foodsItem.slice(0, 6).map(food=>{
             return <FoodCard food={food}/>
         })
     }
+    </div>
     </div>
   )
 }
