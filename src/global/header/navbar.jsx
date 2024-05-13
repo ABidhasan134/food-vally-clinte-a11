@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../pages/context/AuthProvider";
-
+import { motion } from "framer-motion"
 
 
 const Navbar = () => {
@@ -15,19 +15,28 @@ const Navbar = () => {
     const links = (
     <>
       <li >
-      <a ><NavLink to="/">Home</NavLink></a>
+      <motion.button whileHover={{scale:1.1}}><a ><NavLink to="/">Home</NavLink></a>
+          </motion.button>
       </li >
       <li >
+      <motion.button whileHover={{scale:1.1}}>
        <a><NavLink to="/availablefood">Available food</NavLink></a> 
+      </motion.button>
       </li>
       <li>
+      <motion.button whileHover={{scale:1.1}}>
         <a><NavLink to="/addfood" >Add Food</NavLink></a>
+      </motion.button>
       </li>
       <li >
+      <motion.button whileHover={{scale:1.1}}>
         <a><NavLink to="/managefood" >Manage food</NavLink></a>
+      </motion.button>
       </li>
       <li >
+      <motion.button whileHover={{scale:1.1}}>
         <a><NavLink to="/request">Food Request</NavLink></a>
+      </motion.button>
       </li>
     </>
   );
@@ -35,10 +44,14 @@ const Navbar = () => {
   const loginRegister = (
     <>
       <li>
+      <motion.button whileHover={{scale:1.1}}>
         <NavLink to="/login">Log In</NavLink>
+      </motion.button>
       </li>
       <li>
+      <motion.button whileHover={{scale:1.1}}>
         <NavLink to="/register">Register</NavLink>
+      </motion.button>
       </li>
     </>
   );

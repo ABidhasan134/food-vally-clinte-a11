@@ -5,6 +5,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { IoFastFoodSharp } from "react-icons/io5";
 import { MdDateRange } from "react-icons/md";
 import { TfiTime } from "react-icons/tfi";
+import location from "../../../../public/img/location.gif"
 
 const FoodCard = ({food}) => {
     // console.log(food)
@@ -25,7 +26,6 @@ const FoodCard = ({food}) => {
             <p>{food.Food_Quantity}</p>
           </div>
           <div className="flex items-center  text-xl">
-            <CiLocationOn></CiLocationOn>
             <img className="h-[50px]" src={location} alt="" />
             <p>{food.Pickup_Location}</p>
           </div>
@@ -48,7 +48,8 @@ const FoodCard = ({food}) => {
           to={`/details/${food._id}`}
           className="btn border-none bg-sky-400 hover:bg-sky-800 hover:text-white"
         >
-           View Details
+          
+          View Details
         </Link>
       </div>
     </div>
