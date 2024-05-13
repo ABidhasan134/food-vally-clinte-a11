@@ -66,7 +66,7 @@ const Footer = () => {
     </nav>
     
   </footer>
-  <div className="relative text-center  lg:mt-72 mt-[750px]"><p>Copyright © 2024 - All right reserved by HomeLand Builders Ltd</p></div>
+  <div className="relative text-center  lg:mt-72 mt-[750px]"><p>Copyright © 2024 - All right reserved by Food Vally Ltd</p></div>
   </div>
   </div>
    </div>

@@ -15,9 +15,10 @@ const FoodsItems = () => {
     // console.log(foodsItem);
   return (
     <div>
-        <div>
-            <h1>Donated Items</h1>
-        </div>
+        <div className='text-center my-10'>
+      <h1 className='text-3xl font-bold'>Donate Items</h1>
+      <p>Generously donated essential supplies to support <br /> vulnerable communities in need, ensuring access to basic necessities and fostering hope for a brighter future.</p>
+    </div>
         <div className="mx-2 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 relative sm:-top-12 md:top-0 lg:top-0">
     {
         foodsItem.slice(0, 6).map(food=>{

@@ -20,7 +20,7 @@ const Bannar = () => {
               <p className="mb-5">
               Nourish Together is a digital platform dedicated to fostering community-driven food sharing and reducing surplus across neighborhoods. By connecting individuals, businesses, and organizations, we aim to redistribute excess food to those in need while promoting sustainability and community resilience. Join us in creating a world where no one goes hungry, and surplus food finds its way to those who need it most.
               </p>
-              <button className="btn btn-primary"><Link to="/availablefood">Show All</Link></button>
+              <button className="btn bg-green-500 hover:bg-green-800 hover:text-white"><Link to="/availablefood">Show All</Link></button>
             </div>
           </div>
         </div>
@@ -50,7 +50,7 @@ const Bannar = () => {
               <p className="mb-5">
                 CNourish Together is a digital platform dedicated to fostering community-driven food sharing and reducing surplus across neighborhoods. By connecting individuals, businesses, and organizations, we aim to redistribute excess food to those in need while promoting sustainability and community resilience. Join us in creating a world where no one goes hungry, and surplus food finds its way to those who need it most.
               </p>
-              <button className="btn btn-primary"><Link to="/availablefood">Show All</Link></button>
+              <button className="btn bg-green-500 hover:bg-green-800 hover:text-white"><Link to="/availablefood">Show All</Link></button>
             </div>
             {/* 2nd end */}
           </div>
@@ -80,7 +80,7 @@ const Bannar = () => {
               <p className="mb-5">
               Nourish Together is a digital platform dedicated to fostering community-driven food sharing and reducing surplus across neighborhoods. By connecting individuals, businesses, and organizations, we aim to redistribute excess food to those in need while promoting sustainability and community resilience. Join us in creating a world where no one goes hungry, and surplus food finds its way to those who need it most.
               </p>
-              <button className="btn btn-primary">Get Started</button>
+              <button className="btn bg-green-500 hover:bg-green-800 hover:text-white"><Link to="/availablefood">Show All</Link></button>
             </div>
             {/* 3rd slider end */}
           </div>
@@ -109,7 +109,7 @@ const Bannar = () => {
               <p className="mb-5">
               Nourish Together is a digital platform dedicated to fostering community-driven food sharing and reducing surplus across neighborhoods. By connecting individuals, businesses, and organizations, we aim to redistribute excess food to those in need while promoting sustainability and community resilience. Join us in creating a world where no one goes hungry, and surplus food finds its way to those who need it most.
               </p>
-              <button className="btn btn-primary">Get Started</button>
+              <button className="btn bg-green-500 hover:bg-green-800 hover:text-white"><Link to="/availablefood">Show All</Link></button>
             </div>
           </div>
         </div>

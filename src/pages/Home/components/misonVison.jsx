@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const MisonVison = () => {
   return (
@@ -15,7 +16,7 @@ const MisonVison = () => {
     <h2 className="card-title">AFGHANISTAN EMERGENCY</h2>
     <p>We urgently supports Afghanistan earthquake victims</p>
     <div className="card-actions justify-center">
-      <button className="btn bg-green-500 hover:bg-green-800 hover:text-white">Donate</button>
+      <button className="btn bg-green-500 hover:bg-green-800 hover:text-white"><Link to="addfood">Donate</Link></button>
     </div>
   </div>
 </div>
@@ -26,7 +27,7 @@ const MisonVison = () => {
     <h2 className="card-title">PALESTINE EMERGENCY</h2>
     <p>We is providing urgent support to those affected by the crisis in Palestine</p>
     <div className="card-actions justify-center">
-      <button className="btn bg-green-500 hover:bg-green-800 hover:text-white">Donate</button>
+      <button className="btn bg-green-500 hover:bg-green-800 hover:text-white"><Link to="addfood">Donate</Link></button>
     </div>
   </div>
 </div>
