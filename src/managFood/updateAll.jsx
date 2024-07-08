@@ -9,6 +9,7 @@ const UpdateAll = () => {
     const food=useLoaderData();
     const {user}=useContext(AuthContext);
     const axiosSequer=useAxiosSequ();
+    
     // console.log(food)
 
     const handelAllUpdates=(e)=>{
